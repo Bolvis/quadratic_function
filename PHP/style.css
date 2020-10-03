@@ -1,0 +1,18 @@
+input{
+    width: 20px;
+    background-color: aqua;
+    border-color: lightgrey;
+}
+button{
+    margin-top: 1vh;
+    background-color: aqua;
+    border-color: lightgrey;
+}
+fieldset{
+    text-align: center;
+    width: 300px;
+    height: 120px;
+}
+body{
+    padding: 30vh 30vh 30vh 30vh;
+}
