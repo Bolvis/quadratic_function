@@ -11,8 +11,8 @@ def kwadratowa(a, b, c):
         return [null,null,null],False
     delta = pow(b,2) - (4*a*c)
     if delta >= 0:
-        x1 = -1 * b - math.sqrt(delta)
-        x2 = -1 * b + math.sqrt(delta)
+        x1 = (-1 * b - math.sqrt(delta))/ (2 * a)
+        x2 = (-1 * b + math.sqrt(delta))/ (2 * a)
         possitiveDelta = True
     else:
         possitiveDelta = False
