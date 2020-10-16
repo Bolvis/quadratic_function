@@ -1,44 +1,23 @@
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-var positiveDelta = false
+fun main() {
+    val a = readNumber("A")
+    val b = readNumber("B")
+    val c = readNumber("C")
 
-fun main(args: Array<String>){
+    if(a == 0f) return println("a == 0")
 
-    print("set a ->")
-    var x = readLine()
-    val a = x?.toFloat()
-    if (0f == a) print("u dumb af")
-    print("set b ->")
-    x = readLine()
-    val b = x?.toFloat()
-    print("set c ->")
-    x = readLine()
-    val c = x?.toFloat()
-
-    val r = if (a != null && b != null && c != null){
-        println("quadratic function for a = $a b = $b c = $c")
-        kwadratowa(a,b,c)
-    }else{
-        println("quadratic function for a = 1 b = 1 c = 1")
-        kwadratowa(1f,1f,1f)
+    val delta = b.pow(2) - (4 * a * c)
+    if(delta > 0) {
+        val x1 = (-b - sqrt(delta)) / (2 * a)
+        val x2 = (-b + sqrt(delta)) / (2 * a)
+        println("X1: $x1, X2: $x2")
     }
-
-    if(positiveDelta){
-        println("x1 = ${r[1]}")
-        println("x2 = ${r[2]}")
-    }
-    println("Δ = ${r[0]}")
+    else if(delta == 0f) println("X: ${-b / (2 * a)}")
+    else println("Delta < 0")
 }
 
-fun kwadratowa(a: Float,b: Float,c: Float): FloatArray{
-    val r = FloatArray(3)
-    val delta = b.pow(2) - (4*a*c)
-    r[0] = delta
-    if (delta >= 0){
-        r[1] = -1 * b - sqrt(delta)
-        r[2] = -1 * b + sqrt(delta)
-        positiveDelta = true
-    }
-    return r;
+fun readNumber(name: String): Float = print("Podaj $name: ").run {
+    readLine()?.toFloatOrNull() ?: readNumber(name)
 }

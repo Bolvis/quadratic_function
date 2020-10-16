@@ -1,0 +1,21 @@
+// BOA Programming language
+// https://github.com/karol-202/boa
+
+printLine("Podaj dane wejściowe")
+printLine("A:")
+let a = parseReal(readLine())
+printLine("B:")
+let b = parseReal(readLine())
+printLine("C:")
+let c = parseReal(readLine())
+
+if(a === 0.0) printLine("a = 0")
+else
+{
+    let delta = (b * b) - (4.0 * a * c)
+    let deltaSqrt = sqrt(delta)
+    let x1 = (-b - deltaSqrt) / (2.0 * a)
+    let x2 = (-b + deltaSqrt) / (2.0 * a)
+    printLine("x1: " + x1)
+    printLine("x2: " + x2)
+}
