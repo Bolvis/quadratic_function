@@ -9,8 +9,6 @@ import (
 var possitiveDelta bool
 
 func main() {
-	possitiveDelta = false
-
 	a := getFloat()
 	b := getFloat()
 	c := getFloat()
