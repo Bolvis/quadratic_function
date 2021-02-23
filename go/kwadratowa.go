@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-var possitiveDelta bool
+var positiveDelta bool
 
 func main() {
 	a := getFloat()
@@ -14,7 +14,7 @@ func main() {
 	c := getFloat()
 
 	r := kwadratowa(a, b, c)
-	if possitiveDelta {
+	if positiveDelta {
 		fmt.Printf("x1 = %f\n", r[1])
 		fmt.Printf("x2 = %f\n", r[2])
 	}
@@ -28,7 +28,7 @@ func kwadratowa(a, b, c float64) [3]float64 {
 	if delta >= 0 {
 		r[1] = ((-1 * b) - math.Sqrt(delta)) / (2 * a)
 		r[2] = ((-1 * b) + math.Sqrt(delta)) / (2 * a)
-		possitiveDelta = true
+		positiveDelta = true
 	}
 	return r
 }
