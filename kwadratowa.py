@@ -13,14 +13,14 @@ def kwadratowa(a, b, c):
     if delta >= 0:
         x1 = (-1 * b - math.sqrt(delta))/ (2 * a)
         x2 = (-1 * b + math.sqrt(delta))/ (2 * a)
-        possitiveDelta = True
+        positiveDelta = True
     else:
-        possitiveDelta = False
-    return [delta,x1,x2],possitiveDelta
+        positiveDelta = False
+    return [delta,x1,x2],positiveDelta
 
-r,possitiveDelta = kwadratowa(float(a),float(b),float(c))
+r,positiveDelta = kwadratowa(float(a),float(b),float(c))
 
-if possitiveDelta == True:
+if positiveDelta:
     print("x1 = ",r[1])
     print("x2 = ",r[2])
 print("Δ = ",r[0])

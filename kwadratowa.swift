@@ -1,6 +1,6 @@
 import Foundation
 
-var possitiveDelta = false
+var positiveDelta = false
 
 print("Set a -> ",terminator: "")
 let a = Float(readLine()!) ?? 0
@@ -13,7 +13,7 @@ let c = Float(readLine()!) ?? 0
 print("You've set number to \(a)")
 
 let r = kwadratowe(a,b,c)
-if(possitiveDelta){
+if(positiveDelta){
     print("x1 = \(r[1])")
     print("x2 = \(r[2])")
 }
@@ -30,8 +30,8 @@ func kwadratowe(_ a: Float,_ b: Float,_ c: Float) -> [Float]{
     if (delta >= 0){
         r[1] = (-1 * b - delta.squareRoot())/(2*a)
         r[2] = (-1 * b + delta.squareRoot())/(2*a) 
-        possitiveDelta = true
-    }else {possitiveDelta = false} 
+        positiveDelta = true
+    }else {positiveDelta = false}
     return r
     }   
 }

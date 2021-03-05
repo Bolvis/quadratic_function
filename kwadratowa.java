@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class kwadratowa{
 
-    static boolean possitiveDelta = false;
+    static boolean positiveDelta = false;
 
     public static void main(String[] args){
         float a,b,c;
@@ -19,7 +19,7 @@ public class kwadratowa{
 
         float[] r = kwadratowa(a, b, c);
 
-        if(possitiveDelta){
+        if(positiveDelta){
             System.out.printf("x1 = %f\n",r[1]);
             System.out.printf("x2 = %f\n",r[2]);
         }
@@ -33,8 +33,8 @@ public class kwadratowa{
         if(0 <= delta){
             r[1] = (float)(-1*b - Math.sqrt(delta));
             r[2] = (float)(-1*b + Math.sqrt(delta));
-            possitiveDelta = true;
-        }else possitiveDelta = false;
+            positiveDelta = true;
+        }else positiveDelta = false;
         return r;
     }
 }
