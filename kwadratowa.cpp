@@ -5,10 +5,10 @@ float * kwadratowa(float a,float b, float c);
 float getNumber();
 int main(){
     float a,b,c;
-seta:
-    std::cout<<"Set a ->" ;
-    a = getNumber();
-    if( a == 0 ) goto seta;
+    do{
+        std::cout<<"Set a ->" ;
+        a = getNumber();
+    } while (a == 0);
     std::cout<<"Set b ->" ;
     b = getNumber();
     std::cout<<"Set c ->" ;
