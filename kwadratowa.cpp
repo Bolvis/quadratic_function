@@ -5,7 +5,8 @@ float * kwadratowa(float a,float b, float c);
 float getNumber();
 int main(){
     float a,b,c;
-    do{
+    do {
+        if (a == 0) std::cout<<"a can not be 0"<<std::endl;
         std::cout<<"Set a ->" ;
         a = getNumber();
     } while (a == 0);
