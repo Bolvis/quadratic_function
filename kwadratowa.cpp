@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-float * kwadratowa(float a,float b, float c);
+float * kwadratowa(float a, float b, float c);
 float getNumber();
 int main(){
     float a,b,c;
