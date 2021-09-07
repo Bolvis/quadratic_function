@@ -22,15 +22,16 @@ func main() {
 func kwadratowa(a, b, c float64) (bool, float64, float64, float64) {
 	var r1 float64
 	var r2 float64
-	var positiveDelta bool
-
+	
 	delta := math.Pow(b, 2) - (4 * a * c)
-	if delta >= 0 {
+	
+	positiveDelta := delta >= 0
+
+	if positiveDelta {
 		r1 = ((-1 * b) - math.Sqrt(delta)) / (2 * a)
 		r2 = ((-1 * b) + math.Sqrt(delta)) / (2 * a)
-		positiveDelta = true
 	}
-	
+
 	return positiveDelta, r1, r2, delta
 }
 
