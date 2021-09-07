@@ -11,28 +11,28 @@ func main() {
 	b := getFloat()
 	c := getFloat()
 
-	positiveDelta, r1, r2, delta := kwadratowa(a, b, c)
+	positiveDelta, x1, x2, delta := kwadratowa(a, b, c)
 	if positiveDelta {
-		fmt.Printf("x1 = %f\n", r1)
-		fmt.Printf("x2 = %f\n", r2)
+		fmt.Printf("x1 = %f\n", x1)
+		fmt.Printf("x2 = %f\n", x2)
 	}
 	fmt.Printf("Δ = %f\n", delta)
 }
 
 func kwadratowa(a, b, c float64) (bool, float64, float64, float64) {
-	var r1 float64
-	var r2 float64
+	var x1 float64
+	var x2 float64
 	
 	delta := math.Pow(b, 2) - (4 * a * c)
-	
+
 	positiveDelta := delta >= 0
 
 	if positiveDelta {
-		r1 = ((-1 * b) - math.Sqrt(delta)) / (2 * a)
-		r2 = ((-1 * b) + math.Sqrt(delta)) / (2 * a)
+		x1 = ((-1 * b) - math.Sqrt(delta)) / (2 * a)
+		x2 = ((-1 * b) + math.Sqrt(delta)) / (2 * a)
 	}
 
-	return positiveDelta, r1, r2, delta
+	return positiveDelta, x1, x2, delta
 }
 
 func getFloat() float64 {
