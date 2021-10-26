@@ -3,22 +3,25 @@
 
 float * kwadratowa(float a, float b, float c);
 float getNumber();
+
 int main(){
     float a,b,c;
+    
     do {
         if (a == 0) std::cout<<"a can not be 0"<<std::endl;
         std::cout<<"Set a ->" ;
         a = getNumber();
     } while (a == 0);
+    
     std::cout<<"Set b ->" ;
     b = getNumber();
     std::cout<<"Set c ->" ;
     c = getNumber();
 
     float * r = kwadratowa(a,b,c);
-    if(1 == r[3]){
-    std::cout<<"x1 = "<<r[1]<<std::endl;
-    std::cout<<"x2 = "<<r[2]<<std::endl;
+    if(r[3]){
+        std::cout<<"x1 = "<<r[1]<<std::endl;
+        std::cout<<"x2 = "<<r[2]<<std::endl;
     }
     std::cout<<"Δ = "<<r[0]<<std::endl;
     
