@@ -33,8 +33,8 @@ float * kwadratowa(float a, float b, float c){
     float delta = powf(b,2) + (-4*a*c);
     r[0] = delta;
     if(delta >= 0){
-        r[1] = ((-1 * b) - sqrtf(delta)) / (2*a);
-        r[2] = ((-1 * b) + sqrtf(delta)) / (2*a);
+        r[1] = (-b - sqrtf(delta)) / (2*a);
+        r[2] = (-b + sqrtf(delta)) / (2*a);
         r[3] = 1;
     }
     return r;
